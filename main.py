@@ -4,7 +4,9 @@ import langchain
 from llama_index import SimpleDirectoryReader, SummaryIndex, download_loader, PromptHelper, LLMPredictor, VectorStoreIndex, SummaryIndex
 from llama_index.llms import OpenAI
 import os
-from dotenv import loadenv
+from dotenv import load_dotenv
+
+load_dotenv()
 
 os.environ['OPENAI_API_KEY'] = os.environ["OPENAI_API_TOKEN"]
 # os.environ["OPENAI_API_TOKEN"]
@@ -39,15 +41,3 @@ index = build_index(file_path=file_path)
 def chatbot(prompt):
     # return index.query(prompt, response_mode="compact")
     return index.query(prompt)
-
-
-while True:
-    print('########################################')
-    pt = input('Question: ')
-    if pt.lower() == 'end':
-        break
-    response = chatbot(pt)
-    print('Question:', pt)
-    print('----------------------------------------')
-    print('Answer: ')
-    print(response)
