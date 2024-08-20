@@ -1,10 +1,9 @@
-# ! TODO resolve import dependences for langchain and llama-index
-
 import glob
-from langchain.chat_models import ChatOpenAI
 import langchain
-from llama_index.core import SimpleDirectoryReader, SummaryIndex, download_loader, PromptHelper, LLMPredictor, VectorStoreIndex, SummaryIndex
-from llama_index.llms import OpenAI
+from langchain_openai import ChatOpenAI
+from llama_index.llms.openai import OpenAI
+from llama_index.core import SimpleDirectoryReader, SummaryIndex, download_loader, PromptHelper, VectorStoreIndex
+from llama_index.legacy import LLMPredictor
 import os
 from dotenv import load_dotenv
 
