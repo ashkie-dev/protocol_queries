@@ -1,3 +1,5 @@
+# ! TODO resolve import dependences for langchain and llama-index
+
 import glob
 from langchain.chat_models import ChatOpenAI
 import langchain
