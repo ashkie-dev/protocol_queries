@@ -3,7 +3,7 @@
 import glob
 from langchain.chat_models import ChatOpenAI
 import langchain
-from llama_index import SimpleDirectoryReader, SummaryIndex, download_loader, PromptHelper, LLMPredictor, VectorStoreIndex, SummaryIndex
+from llama_index.core import SimpleDirectoryReader, SummaryIndex, download_loader, PromptHelper, LLMPredictor, VectorStoreIndex, SummaryIndex
 from llama_index.llms import OpenAI
 import os
 from dotenv import load_dotenv
