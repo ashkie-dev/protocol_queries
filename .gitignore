@@ -3,3 +3,4 @@ notebooks
 *.ipynb
 models/__pycache__/query_engine.cpython-311.pyc
 .env
+local/temp
